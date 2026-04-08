@@ -73,7 +73,33 @@
             cursor: pointer;
         }
     </style>
+        .site-title {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #5f4b5b;
+    letter-spacing: 1px;
+}
+.nav-box {
+    display: inline-flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    background-color: #dff4ff;
+    padding: 12px 18px;
+    border-radius: 18px;
+    border: 1px solid #b9e3f7;
+}
 
+.nav-box a {
+    text-decoration: none;
+    color: #3b4f68;
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.nav-box a:hover {
+    text-decoration: underline;
+}
 
 
     <div class="announcement">
@@ -91,26 +117,30 @@
                 <tbody><tr>
                     <td style="text-align: left;">
                         <span style="line-height: 1"><b>  </b></span>
-                        <img src="./index_files/ig_logo.jpg" alt="Logo" class="header-logo">
-                        <span style="line-height: 1"><b>INTEGIRLS Athens</b></span>
+                        <img src="logo.jpg" alt="INTEGIRLS Athens Logo" class="header-logo">
+                        <span class="site-title">INTEGIRLS Athens</span>
                     </td>
-                    <td style="text-align: right;">
-                        <a href="https://test.integirls.org/">Home</a> |
-                        <a href="https://test.integirls.org/compete">Compete</a> |
-                        <a href="https://test.integirls.org/pastcontests">Past Contests</a> |
-                        <a href="https://test.integirls.org/sponsors">Sponsors</a> |
-                        <a href="https://test.integirls.org/donate">Donate</a> |
-                        <a href="https://test.integirls.org/team">Our Team</a> |
-                        <a href="https://www.integirls.org/" target="_blank">INTEGIRLS</a>
-                    </td>
+                   <td style="text-align: right;">
+    <div class="nav-box">
+        <a href="https://athensintegirls.github.io/">Home</a>
+        <a href="https://athensintegirls.github.io/compete">Compete</a>
+        <a href="https://athensintegirls.github.io/pastcontests">Past Contests</a>
+        <a href="https://athensintegirls.github.io/sponsors">Sponsors</a>
+        <a href="https://athensintegirls.github.io/donate">Donate</a>
+        <a href="https://athensintegirls.github.io/team">Our Team</a>
+        <a href="https://www.integirls.org/" target="_blank">INTEGIRLS</a>
+    </div>
+</td>
                 </tr>
             </tbody></table>
         </div>
 
         <main>
-            <section class="hero">
-                <h1 class="fade-in">INTEGIRLS Athens</h1>
-            </section>
+            <section class="hero-banner">
+    <div class="hero-overlay">
+        <h1>Welcome to INTEGIRLS Athens, Greece!</h1>
+    </div>
+</section>
 
             <!-- Add your mission statement below -->
             <section class="mission">
