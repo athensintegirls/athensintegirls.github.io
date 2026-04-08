@@ -100,7 +100,116 @@
 .nav-box a:hover {
     text-decoration: underline;
 }
+        .hero-banner {
+    width: 100%;
+    height: 500px;
+    background-image: url('athens.webp');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 80px;
+}
 
+.hero-overlay {
+    background: rgba(255, 245, 250, 0.45);
+    padding: 30px 50px;
+    border-radius: 24px;
+    text-align: center;
+}
+
+.hero-overlay h1 {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    font-size: 3.5rem;
+    color: #5b455c;
+    margin: 0;
+    line-height: 1.2;
+}
+       .mission {
+    max-width: 1200px;
+    margin: 0 auto 100px auto;
+    padding: 0 60px;
+}
+
+.mission h2 {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    font-size: 4.5rem;
+    font-weight: 400;
+    text-align: center;
+    color: #7a6558;
+    margin-bottom: 30px;
+}
+
+.mission h2::after {
+    content: "";
+    display: block;
+    width: 100%;
+    max-width: 1340px;
+    margin: 30px auto 0 auto;
+    border-bottom: 1px solid #8c776a;
+}
+
+.mission p {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    font-size: 1.15rem;
+    line-height: 2;
+    color: #1e1a17;
+    text-align: left;
+    margin-top: 50px;
+} 
+.faq-section {
+    max-width: 1400px;
+    margin: 0 auto 100px auto;
+    padding: 0 40px;
+}
+
+.faq-section h2 {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    font-size: 4rem;
+    font-weight: 400;
+    text-align: center;
+    color: #7a6558;
+    margin-bottom: 40px;
+}
+
+.faq-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px 70px;
+}
+
+.faq-item h3 {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: #7a6558;
+    line-height: 1.5;
+    margin-bottom: 22px;
+}
+
+.faq-item p {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    font-size: 1.05rem;
+    line-height: 2;
+    color: #1e1a17;
+}
+        .top-bar {
+    width: 100%;
+    padding: 20px 30px;
+    box-sizing: border-box;
+}
+
+.header-logo {
+    width: 55px;
+    height: 55px;
+    object-fit: cover;
+    border-radius: 50%;
+    vertical-align: middle;
+    margin-right: 12px;
+}
 
     <div class="announcement">
         <!-- insert the link of whatever you want the button to lead to, like a competition registration form -->
@@ -145,7 +254,7 @@
             <!-- Add your mission statement below -->
             <section class="mission">
                 <h2>Our Mission</h2>
-                <p>INTEGIRLS is a nonprofit teen-led organization with a mission to bridge the gender gap in STEM through exciting math opportunities! All our programs are offered free of cost to our participants.</p>
+                <p>As girls and non-binary individuals in math, all of us have seen the stark differences between the number of boys, girls, and non-binary participants in traditional math competitions or math-related activities in general. This monumental gap has discouraged many girls and non-binary people around the world from pursuing math, either as a hobby or a career. Through our competition, we hope to inspire a passion for this subject in more girls and non-binary individuals, helping to close this gap. Additionally, by bringing together those who love math, we aim to create a community of future female and non-binary mathematicians who can support each other in the face of any discrimination. Math is an amazing subject full of hidden puzzles and strategies, and together, we want to create an event full of joy where girls and non-binary participants can bond over the beauty of the subject.</p>
             </section>
 
             <!-- Add something you want to highlight on the homepage, such as an upcoming event, below! (placeholder modified from Bay Area website)-->
@@ -156,37 +265,23 @@
                     Sign-ups for the fall event will open once the date is finalized!</p>
             </section>
 
-            <section class="faq">
-                <h2>FAQs (Frequently Asked Questions)</h2>
-                <table>
-                    <tbody><tr>
-                        <td style="padding-left: 20px; padding-right: 20px; text-align: left;">
-                            <h4>I’m interested but have no math competition experience. Can I still attend?</h4><br>
-                            Of course, you should really at eventtend this competition. In the past, many people have stated that INTEGIRLS gave them an entry into math competitions and they had no idea how it was until they attended the event. If you would like any pointers to understand how to prepare, you can feel free to email us. Hope to see you at our events.
-                        </td>
-                        <td style="padding-left: 20px; padding-right: 20px; text-align: left;">
-                            <h4>I do not have a INTEGIRLS Chapter near my area, but I am interested in participating in the competition. Can I still attend?</h4><br>
-                            We also encourage students not only from Athens to attend, but also other areas as well. You may reach out to us at the links provided at the bottom of this page.
-                        </td>
-                    </tr>
-                    <tr>
-                        <td style="padding-left: 20px; padding-right: 20px; text-align: left;">
-                            <h4>Who can I contact if I have any questions?</h4><br>
-                            You can contact us through Email or Instagram at the links provided at the bottom of this page. If it is urgent, you can message us on Instagram or add "URGENT" is subject line of your email. 
-                        </td>
-                        <td style="padding-left: 20px; padding-right: 20px; text-align: left;">
-                            <h4>I do not identify as female, but I would like to participate. How can I do that?</h4><br>
-                            If you do not identify as female or non-binary, we encourage you to check out other opportunities we may share. You can contact <a href="mailto:laintegirls.org">la@integirls.org</a> to find more activities apt for you.
-                        </td>
-                    </tr>
-                    <tr>
-                        <td style="padding-left: 20px; padding-right: 20px; text-align: left;">
-                            <h4>How can I contribute?</h4><br>
-                            You may choose to volunteer for us by emailing us at athens@integirls.org or can donate to our non-profit <a href="https://integirls.github.io/donate/index.html">here</a>. You can also email us at <a href="mailto:la@integirls.org">la@integirls.org</a> to receive more information about how you can help. YOUR HELP MAKES A DIFFERENCE TO US. 
-                        </td>
-                    </tr>
-                </tbody></table>
-            </section>
+            </div>
+
+        <div class="faq-item">
+            <h3>I do not identify as female, but I would like to participate. How can I do that?</h3>
+            <p>
+                If you do not identify as female or non-binary, we encourage you to check out other opportunities we may share. You can contact la@integirls.org to find more activities apt for you.
+            </p>
+        </div>
+
+        <div class="faq-item">
+            <h3>How can I contribute?</h3>
+            <p>
+                You may choose to volunteer for us by emailing us at athens@integirls.org or donate to support our non-profit initiatives. You can also email us to receive more information about how you can help.
+            </p>
+        </div>
+    </div>
+</section>
 
         </main>
 
