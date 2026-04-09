@@ -293,7 +293,83 @@
             <button>REGISTER</button>
         </a>
     </div>
+.nav-cell {
+    position: relative;
+}
 
+.nav-box {
+    display: inline-flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    background-color: #dff4ff;
+    padding: 12px 18px;
+    border-radius: 18px;
+    border: 1px solid #b9e3f7;
+}
+
+.nav-box a {
+    text-decoration: none;
+    color: #3b4f68;
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.nav-box a:hover {
+    text-decoration: underline;
+}
+
+.menu-button {
+    display: none;
+    width: 46px;
+    height: 46px;
+    border: 1px solid #b9e3f7;
+    border-radius: 12px;
+    background-color: #dff4ff;
+    cursor: pointer;
+    padding: 0;
+    position: relative;
+}
+
+.menu-button span {
+    display: block;
+    width: 20px;
+    height: 2px;
+    background-color: #3b4f68;
+    margin: 4px auto;
+    border-radius: 2px;
+}
+
+@media (max-width: 900px) {
+    .menu-button {
+        display: inline-block;
+    }
+
+    .nav-box {
+        display: none;
+        position: absolute;
+        right: 0;
+        top: 58px;
+        min-width: 220px;
+        background-color: #dff4ff;
+        border: 1px solid #b9e3f7;
+        border-radius: 16px;
+        padding: 14px;
+        box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+        z-index: 999;
+    }
+
+    .nav-box.show {
+        display: flex;
+    }
+
+    .nav-box a {
+        width: 100%;
+        padding: 4px 0;
+    }
+}
     <div class="main-body">
         <div class="top-bar">
             <table>
@@ -306,10 +382,14 @@
                             </div>
                         </td>
 
-                        <td style="text-align: right;">
-    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+                        <td style="text-align: right;" class="nav-cell">
+    <button class="menu-button" onclick="toggleMenu()" aria-label="Open menu">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
 
-    <div class="nav-box" id="mobileMenu">
+    <div class="nav-box" id="siteMenu">
         <a href="index.html">Home</a>
         <a href="compete.html">Compete</a>
         <a href="pastcontests.html">Past Contests</a>
@@ -394,6 +474,23 @@ function toggleMenu() {
     const menu = document.getElementById("mobileMenu");
     menu.classList.toggle("show");
 }
+</script>
+    <script>
+function toggleMenu() {
+    const menu = document.getElementById("siteMenu");
+    menu.classList.toggle("show");
+}
+
+document.addEventListener("click", function(event) {
+    const menu = document.getElementById("siteMenu");
+    const button = document.querySelector(".menu-button");
+
+    if (!menu || !button) return;
+
+    if (!menu.contains(event.target) && !button.contains(event.target)) {
+        menu.classList.remove("show");
+    }
+});
 </script>
 </body>
 </html>
