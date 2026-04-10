@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Events - INTEGIRLS Athens</title>
+
+<style>
+:root {
+    --bg-pink: #fdf1f7;
+    --title-color: #5f4b5b;
+}
+
+body {
+    margin: 0;
+    background-color: var(--bg-pink);
+    font-family: Arial, sans-serif;
+}
+
+/* HEADER */
+.top-bar {
+    width: 100%;
+    padding: 20px 30px;
+    box-sizing: border-box;
+}
+
+.top-bar table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.header-logo {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+}
+
+.site-title {
+    font-family: "Brush Script MT", cursive;
+    font-size: 1.5rem;
+    color: var(--title-color);
+}
+
+.nav-box {
+    display: inline-flex;
+    gap: 14px;
+    background-color: white;
+    padding: 12px 18px;
+    border-radius: 18px;
+    border: 1.5px solid var(--title-color);
+}
+
+.nav-box a {
+    text-decoration: none;
+    color: var(--title-color);
+    font-weight: 600;
+}
+
+/* MOBILE MENU */
+.menu-button {
+    display: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: black;
+    border: none;
+}
+
+.menu-button span {
+    display: block;
+    width: 20px;
+    height: 2px;
+    background: white;
+    margin: 4px auto;
+}
+
+.mobile-menu-overlay {
+    display: none;
+}
+
+.mobile-menu-overlay.show {
+    display: flex;
+}
+
+.mobile-menu-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.mobile-menu-links a {
+    font-size: 2rem;
+    text-decoration: none;
+    color: #666;
+}
+
+.menu-close {
+    position: absolute;
+    top: 80px;
+    right: 40px;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background: black;
+    color: white;
+    font-size: 2rem;
+    border: none;
+}
+
+/* CONTENT */
+.events-section {
+    text-align: center;
+    margin-top: 180px;
+    padding: 0 20px;
+}
+
+.events-section h1 {
+    font-family: Georgia, serif;
+    font-size: 2.5rem;
+    color: var(--title-color);
+    margin-bottom: 30px;
+}
+
+.events-section p {
+    font-family: Georgia, serif;
+    font-size: 1.3rem;
+    color: #444;
+}
+
+/* FOOTER */
+.footer {
+    text-align: center;
+    padding: 40px;
+    font-family: Georgia, serif;
+}
+
+/* MOBILE */
+@media (max-width: 900px) {
+    .nav-box {
+        display: none;
+    }
+
+    .menu-button {
+        display: inline-block;
+    }
+
+    .mobile-menu-overlay {
+        position: fixed;
+        inset: 0;
+        background: rgba(240,240,240,0.96);
+        justify-content: center;
+        padding-top: 140px;
+    }
+
+    .events-section {
+        margin-top: 120px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<div class="top-bar">
+<table>
+<tr>
+
+<td style="text-align: left;">
+    <div class="header-left">
+        <img src="logo.jpg" class="header-logo">
+        <span class="site-title">INTEGIRLS Athens</span>
+    </div>
+</td>
+
+<td style="text-align: right; vertical-align: middle;">
+    <div class="nav-box">
+        <a href="index.html">Home</a>
+        <a href="events.html">Events</a>
+        <a href="pastcontests.html">Past Contests</a>
+        <a href="sponsors.html">Sponsors</a>
+        <a href="donate.html">Donate</a>
+        <a href="team.html">Our Team</a>
+        <a href="https://www.integirls.org/">INTEGIRLS</a>
+    </div>
+
+    <button class="menu-button" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+</td>
+
+</tr>
+</table>
+</div>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu-overlay" id="siteMenu">
+<button class="menu-close" onclick="toggleMenu()">✕</button>
+
+<div class="mobile-menu-links">
+    <a href="index.html">HOME</a>
+    <a href="events.html">EVENTS</a>
+    <a href="pastcontests.html">PAST CONTESTS</a>
+    <a href="sponsors.html">SPONSORS</a>
+    <a href="donate.html">DONATE</a>
+    <a href="team.html">OUR TEAM</a>
+    <a href="https://www.integirls.org/">INTEGIRLS</a>
+</div>
+</div>
+
+<!-- CONTENT -->
+<div class="events-section">
+
+<h1>Our events are about to be announced soon!</h1>
+
+<p>Thank you for your interest!</p>
+
+</div>
+
+<!-- FOOTER -->
+<div class="footer">
+© 2025 INTEGIRLS Athens
+</div>
+
+<script>
+function toggleMenu() {
+    document.getElementById("siteMenu").classList.toggle("show");
+}
+</script>
+
+</body>
+</html>
