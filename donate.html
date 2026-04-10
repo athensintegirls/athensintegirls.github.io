@@ -6,16 +6,22 @@
     <title>Donate - INTEGIRLS Athens</title>
 
     <style>
+        :root {
+            --bg-pink: #fdf1f7;
+            --soft-brown: #7a6558;
+            --text-dark: #1e1a17;
+            --title-color: #5f4b5b;
+        }
+
         body {
             margin: 0;
-            background-color: #fdf1f7;
+            background-color: var(--bg-pink);
             font-family: Arial, sans-serif;
         }
 
         .top-bar {
             width: 100%;
             padding: 20px 30px;
-            box-sizing: border-box;
         }
 
         table {
@@ -26,41 +32,85 @@
         .header-left {
             display: flex;
             align-items: center;
-            gap: 10px;
+            gap: 8px;
         }
 
         .header-logo {
-            width: 22px;
-            height: 22px;
+            width: 24px;
+            height: 24px;
             border-radius: 50%;
         }
 
         .site-title {
-            font-family: Georgia, serif;
-            font-size: 2rem;
-            font-weight: bold;
-            color: #5f4b5b;
+            font-family: "Brush Script MT", "Lucida Handwriting", cursive;
+            font-size: 1.5rem;
+            color: var(--title-color);
         }
 
-       .nav-box {
-    display: inline-flex;
-    flex-wrap: wrap;
-    gap: 14px;
-    background-color: #dff4ff;
-    padding: 12px 18px;
-    border-radius: 18px;
-    border: 1px solid #b9e3f7;
-    max-width: 100%;
-}
+        .nav-box {
+            display: inline-flex;
+            gap: 14px;
+            background-color: white;
+            padding: 12px 18px;
+            border-radius: 18px;
+            border: 1.5px solid var(--title-color);
+        }
 
         .nav-box a {
             text-decoration: none;
-            color: #3b4f68;
+            color: var(--title-color);
             font-weight: 600;
         }
 
-        .nav-box a:hover {
-            text-decoration: underline;
+        .menu-button {
+            display: none;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: black;
+            border: none;
+        }
+
+        .menu-button span {
+            display: block;
+            width: 20px;
+            height: 2px;
+            background: white;
+            margin: 4px auto;
+        }
+
+        .mobile-menu-overlay {
+            display: none;
+        }
+
+        .mobile-menu-overlay.show {
+            display: flex;
+        }
+
+        .mobile-menu-links {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 30px;
+        }
+
+        .mobile-menu-links a {
+            font-size: 2rem;
+            text-decoration: none;
+            color: #666;
+        }
+
+        .menu-close {
+            position: absolute;
+            top: 80px;
+            right: 40px;
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            background: black;
+            color: white;
+            font-size: 2rem;
+            border: none;
         }
 
         .donate-section {
@@ -80,126 +130,29 @@
             margin-bottom: 40px;
         }
 
-        .donate-section a {
-            color: #2d2326;
-            text-decoration: underline;
-        }
-
         .footer {
             text-align: center;
             padding: 30px;
             font-family: Georgia, serif;
         }
 
-        .footer a {
-            color: #5f4b5b;
-            text-decoration: none;
+        @media (max-width: 900px) {
+            .nav-box {
+                display: none;
+            }
+
+            .menu-button {
+                display: inline-block;
+            }
+
+            .mobile-menu-overlay {
+                position: fixed;
+                inset: 0;
+                background: rgba(240,240,240,0.96);
+                justify-content: center;
+                padding-top: 140px;
+            }
         }
-
-        .footer a:hover {
-            text-decoration: underline;
-        }
-        .nav-cell {
-    position: relative;
-}
-
-.menu-button {
-    display: none;
-    width: 54px;
-    height: 54px;
-    border: none;
-    border-radius: 50%;
-    background: #000000;
-    cursor: pointer;
-    padding: 0;
-    vertical-align: middle;
-}
-
-.menu-button span {
-    display: block;
-    width: 22px;
-    height: 2px;
-    background-color: #ffffff;
-    margin: 5px auto;
-    border-radius: 2px;
-}
-
-.mobile-menu-overlay {
-    display: none;
-}
-
-.mobile-menu-overlay.show {
-    display: flex;
-}
-
-.menu-close {
-    position: absolute;
-    top: 90px;
-    right: 40px;
-    width: 78px;
-    height: 78px;
-    border: none;
-    border-radius: 50%;
-    background: #000000;
-    color: #ffffff;
-    font-size: 2.8rem;
-    line-height: 1;
-    cursor: pointer;
-}
-
-.mobile-menu-links {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 34px;
-}
-
-.mobile-menu-links a {
-    text-decoration: none;
-    font-family: Arial, sans-serif;
-    font-size: 2rem;
-    letter-spacing: 3px;
-    color: #666666;
-    font-weight: 300;
-}
-
-@media (max-width: 900px) {
-    .nav-box {
-        display: none;
-    }
-
-    .menu-button {
-        display: inline-block;
-    }
-
-    .mobile-menu-overlay {
-        position: fixed;
-        inset: 0;
-        background: rgba(240, 240, 240, 0.96);
-        z-index: 9999;
-        justify-content: center;
-        align-items: flex-start;
-        padding-top: 140px;
-    }
-
-    .top-bar {
-        padding: 20px 20px;
-    }
-
-    .site-title {
-        font-size: 1.5rem;
-    }
-
-    .donate-section {
-        margin: 70px 20px;
-        padding: 40px 24px;
-    }
-
-    .donate-section p {
-        font-size: 1.05rem;
-        line-height: 1.7;
-    }
-}
     </style>
 </head>
 
@@ -215,28 +168,29 @@
                 </div>
             </td>
 
-           <td style="text-align:right;" class="nav-cell">
-    <div class="nav-box">
-        <a href="index.html">Home</a>
-        <a href="compete.html">Compete</a>
-        <a href="pastcontests.html">Past Contests</a>
-        <a href="sponsors.html">Sponsors</a>
-        <a href="donate.html">Donate</a>
-        <a href="team.html">Our Team</a>
-        <a href="https://www.integirls.org/" target="_blank">INTEGIRLS</a>
-    </div>
+            <td style="text-align:right;">
+                <div class="nav-box">
+                    <a href="index.html">Home</a>
+                    <a href="compete.html">Compete</a>
+                    <a href="pastcontests.html">Past Contests</a>
+                    <a href="sponsors.html">Sponsors</a>
+                    <a href="donate.html">Donate</a>
+                    <a href="team.html">Our Team</a>
+                    <a href="https://www.integirls.org/">INTEGIRLS</a>
+                </div>
 
-    <button class="menu-button" onclick="toggleMenu()" aria-label="Open menu">
-        <span></span>
-        <span></span>
-        <span></span>
-    </button>
-</td>
+                <button class="menu-button" onclick="toggleMenu()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </td>
         </tr>
     </table>
 </div>
+
 <div class="mobile-menu-overlay" id="siteMenu">
-    <button class="menu-close" onclick="toggleMenu()" aria-label="Close menu">✕</button>
+    <button class="menu-close" onclick="toggleMenu()">✕</button>
 
     <div class="mobile-menu-links">
         <a href="index.html">HOME</a>
@@ -245,15 +199,15 @@
         <a href="sponsors.html">SPONSORS</a>
         <a href="donate.html">DONATE</a>
         <a href="team.html">OUR TEAM</a>
-        <a href="https://www.integirls.org/" target="_blank">INTEGIRLS</a>
+        <a href="https://www.integirls.org/">INTEGIRLS</a>
     </div>
 </div>
+
 <div class="donate-section">
 
     <p>
         All donations are tax-deductible. Email 
-        <a href="mailto:sponsor@integirls.org">sponsor@integirls.org</a> 
-        for more information.
+        sponsor@integirls.org for more information.
     </p>
 
     <p>
@@ -261,38 +215,19 @@
     </p>
 
     <p>
-        All donations to INTEGIRLS Athens will help cover competitions costs such as prizes and activities, to help make our events successful. Please specify that the donation is to the Athens chapter. Thank you so much!
+        All donations to INTEGIRLS Athens will help cover competitions costs such as prizes and activities. Thank you so much!
     </p>
 
 </div>
 
 <div class="footer">
     <div>© 2025 INTEGIRLS Athens</div>
-    <div>
-        <a href="https://www.instagram.com/integirls.athens" target="_blank">@integirls.athens</a> |
-        <a href="mailto:athens@integirls.org">athens@integirls.org</a>
-    </div>
 </div>
+
 <script>
 function toggleMenu() {
-    const menu = document.getElementById("siteMenu");
-    menu.classList.toggle("show");
+    document.getElementById("siteMenu").classList.toggle("show");
 }
-
-document.addEventListener("click", function(event) {
-    const menu = document.getElementById("siteMenu");
-    const button = document.querySelector(".menu-button");
-
-    if (!menu || !button) return;
-
-    if (
-        menu.classList.contains("show") &&
-        !menu.contains(event.target) &&
-        !button.contains(event.target)
-    ) {
-        menu.classList.remove("show");
-    }
-});
 </script>
 
 </body>
