@@ -1,11 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <div class="nav-box">
+    <a href="index.html">Home</a>
+    <a href="events.html">Events</a>
+    <a href="pastevents.html">Past Events</a>
+    <a href="donate.html">Donate</a>
+    <a href="team.html">Our Team</a>
+    <a href="https://www.integirls.org/">INTEGIRLS</a>
+</div>
+
+<button class="menu-button" onclick="toggleMenu()">
+    <span></span>
+    <span></span>
+    <span></span>
+</button>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Events - INTEGIRLS Athens</title>
 
 <style>
+  .contest-title {
+  text-align: center;
+  font-size: 42px;
+  color: #8b7266;
+  margin-bottom: 25px;
+  font-family: serif;
+}
+  /* MOBILE BUTTON */
+.menu-button {
+    display: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: black;
+    border: none;
+}
+
+.menu-button span {
+    display: block;
+    width: 20px;
+    height: 2px;
+    background: white;
+    margin: 4px auto;
+}
+
+/* OVERLAY */
+.mobile-menu-overlay {
+    display: none;
+}
+
+.mobile-menu-overlay.show {
+    display: flex;
+}
+
+.mobile-menu-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.mobile-menu-links a {
+    font-size: 2rem;
+    text-decoration: none;
+    color: #666;
+}
+
+.menu-close {
+    position: absolute;
+    top: 80px;
+    right: 40px;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background: black;
+    color: white;
+    font-size: 2rem;
+    border: none;
+}
+
+/* MOBILE */
+@media (max-width: 900px) {
+    .nav-box {
+        display: none;
+    }
+
+    .menu-button {
+        display: inline-block;
+    }
+
+    .mobile-menu-overlay {
+        position: fixed;
+        inset: 0;
+        background: rgba(240,240,240,0.96);
+        justify-content: center;
+        padding-top: 140px;
+        z-index: 999;
+    }
+}
   .inti-gallery {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -206,7 +299,18 @@ body {
 }
 </style>
 </head>
+<div class="mobile-menu-overlay" id="siteMenu">
+    <button class="menu-close" onclick="toggleMenu()">✕</button>
 
+    <div class="mobile-menu-links">
+        <a href="index.html">HOME</a>
+        <a href="events.html">EVENTS</a>
+        <a href="pastevents.html">PAST EVENTS</a>
+        <a href="donate.html">DONATE</a>
+        <a href="team.html">OUR TEAM</a>
+        <a href="https://www.integirls.org/">INTEGIRLS</a>
+    </div>
+</div>
 <body>
 
 <!-- HEADER -->
@@ -256,9 +360,17 @@ body {
 </div>
 
 <!-- CONTENT -->
+  <h2 class="contest-title">Spring 2026 Contest</h2>
   <section class="inti-gallery">
   <img src="intiphoto1.jpg" alt="INTI photo 1">
   <img src="intiphoto2.jpg" alt="INTI photo 2">
   <img src="intiphoto3.JPG" alt="INTI photo 3">
   <img src="intiphoto4.jpg" alt="INTI photo 4">
 </section>
+  <script>
+function toggleMenu() {
+    document.getElementById("siteMenu").classList.toggle("show");
+}
+</script>
+</body>
+</html>
