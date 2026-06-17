@@ -504,35 +504,11 @@
                     </div>
                 </div>
             </section>
-        </main>
+       </main>
 
-        <div class="footer">
-            <div>© 2025 INTEGIRLS Athens</div>
-            <div style="margin-top: 10px;">
-                <a href="https://www.instagram.com/integirls.athens" target="_blank">@integirls.athens</a> |
-                <a href="mailto:athens@integirls.org">athens@integirls.org</a>
-            </div>
-        </div>
-    </div>
-
-    <script>
-        function toggleMenu() {
-            const menu = document.getElementById("siteMenu");
-            menu.classList.toggle("show");
-        }
-
-        document.addEventListener("click", function(event) {
-            const menu = document.getElementById("siteMenu");
-            const button = document.querySelector(".menu-button");
-
-            if (!menu || !button) return;
-
-            if (!menu.contains(event.target) && !button.contains(event.target)) {
-                menu.classList.remove("show");
-            }
-        });
-        <section class="newsletter-section">
+<section class="newsletter-section">
   <h2>Sign Up for Our Mailing List</h2>
+
   <p>
     Sign up below to be updated with more opportunities we may have!
   </p>
@@ -584,6 +560,33 @@
     </button>
   </form>
 </section>
-    </script>
+
+<div class="footer">
+            <div>© 2025 INTEGIRLS Athens</div>
+            <div style="margin-top: 10px;">
+                <a href="https://www.instagram.com/integirls.athens" target="_blank">@integirls.athens</a> |
+                <a href="mailto:athens@integirls.org">athens@integirls.org</a>
+            </div>
+        </div>
+    </div>
+
+   <script>
+function toggleMenu() {
+    const menu = document.getElementById("siteMenu");
+    menu.classList.toggle("show");
+}
+
+document.addEventListener("click", function(event) {
+    const menu = document.getElementById("siteMenu");
+    const button = document.querySelector(".menu-button");
+
+    if (!menu || !button) return;
+
+    if (!menu.contains(event.target) &&
+        !button.contains(event.target)) {
+        menu.classList.remove("show");
+    }
+});
+</script>
 </body>
 </html>
