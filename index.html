@@ -99,9 +99,38 @@
             font-family: Arial, sans-serif;
         }
 
-        .announcement {
-            display: none;
-        }
+       .announcement {
+    width: 100%;
+    background-color: var(--light-blue);
+    border-bottom: 1px solid var(--light-blue-border);
+    text-align: center;
+    padding: 13px 20px;
+}
+
+.announcement a {
+    color: var(--nav-text);
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+    transition: opacity 0.2s ease;
+}
+
+.announcement a:hover {
+    opacity: 0.65;
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .announcement {
+        padding: 11px 15px;
+    }
+
+    .announcement a {
+        font-size: 0.9rem;
+        line-height: 1.4;
+    }
+}
 
         .main-body {
             width: 100%;
@@ -395,6 +424,17 @@
             }
         }
     </style>
+    <body>
+
+    <div class="announcement">
+        <a href="https://sites.google.com/view/bioengineeringforall/%CE%B1%CF%81%CF%87%CE%B9%CE%BA%CE%AE-%CF%83%CE%B5%CE%BB%CE%AF%CE%B4%CE%B1"
+           target="_blank"
+           rel="noopener noreferrer">
+            Visit our bioengineering4all website!
+        </a>
+    </div>
+
+    <div class="main-body">
 </head>
 <body>
 
